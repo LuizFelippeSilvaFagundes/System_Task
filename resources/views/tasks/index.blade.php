@@ -24,6 +24,8 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ $task->title }}</h5>
                     <p class="card-text">{{ $task->description }}</p>
+                    <p class="card-text"><small class="text-muted">Criado em: {{ $task->created_at->format('d/m/Y H:i') }}</small></p> <!-- Data de criação -->
+                    <p class="card-text"><small class="text-muted">Atualizado em: {{ $task->updated_at->format('d/m/Y H:i') }}</small></p> <!-- Data de atualização -->
                     <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-warning">Editar</a>
 
                     <form action="{{ route('tasks.destroy', $task->id) }}" method="POST" style="display:inline;">

@@ -30,6 +30,9 @@
             <textarea class="form-control" id="description" name="description">{{ old('description', $task->description) }}</textarea>
         </div>
 
+        <p><small class="text-muted">Criado em: {{ $task->created_at->format('d/m/Y H:i') }}</small></p> <!-- Data de criação -->
+        <p><small class="text-muted">Atualizado em: {{ $task->updated_at->format('d/m/Y H:i') }}</small></p> <!-- Data de atualização -->
+
         <button type="submit" class="btn btn-success">Atualizar Tarefa</button>
     </form>
 </div>

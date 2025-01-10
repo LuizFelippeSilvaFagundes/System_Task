@@ -9,4 +9,5 @@ class Task extends Model
 {
     use HasFactory;
     protected $fillable = ['title', 'description', 'user_id']; // Adicione 'title' e 'description' aqui
+    public $timestamps = true; // Isso é padrão e pode ser omitido
 }
